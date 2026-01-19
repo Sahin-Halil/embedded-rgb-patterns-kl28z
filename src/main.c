@@ -1,14 +1,3 @@
-/* ------------------------------------------
-       ECS642/ECS714 Lab4
-
-   The green LED is displayed at different brightness levels using PWM
-   The PIT is used to time the transition between the brightness levels
-   A button press switches between two rates (by changing the PIT load value): 
-       * a fast one cycles through all the brightness levels in 2 s
-       * a medium one cycles in 5 s
-			 * a slow one takes 9 s
-  -------------------------------------------- */
-
 #include <MKL28Z7.h>
 #include <stdbool.h>
 #include "../inc/SysTick.h"
@@ -266,8 +255,8 @@ void updateColourCombo() {
 /*----------------------------------------------------------------------------
   PIT Timer Configuration
   
-  Pattern 1: 192 transitions (6 edges × 32 steps)
-  Pattern 2: 128 transitions (4 faces × 32 steps)
+  Pattern 1: 192 transitions (6 edges ï¿½ 32 steps)
+  Pattern 2: 128 transitions (4 faces ï¿½ 32 steps)
 *----------------------------------------------------------------------------*/
 #define numOfTransitionsTask1 192
 #define numOfTransitionsTask2 128
